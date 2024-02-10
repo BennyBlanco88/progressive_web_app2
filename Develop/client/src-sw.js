@@ -26,7 +26,8 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// Set up asset cache
+// Implemented asset caching
+
 registerRoute(
   ({ request }) => request.destination === 'image',
     new CacheFirst({
